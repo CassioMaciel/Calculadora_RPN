@@ -98,6 +98,21 @@ def e_numero(entrada: str):
 
     return boleano
 
+def calculadora(entrada,stack):
+    if e_numero(entrada):
+        stack = adiciona_ao_stack(float(entrada), stack)
+    elif entrada == '+':
+        stack = soma_stack(stack)
+    elif entrada == '-':
+        stack = subtrai_stack(stack)
+    elif entrada == '/':
+        stack = divide_stack(stack)
+    elif entrada == '*':
+        stack = multiplica_stack(stack)
+    # elif entrada == 'clc':
+        # stack = inicializa_stack()
+    return stack
+
 
 if __name__ == '__main__':
     import doctest
