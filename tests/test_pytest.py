@@ -200,3 +200,12 @@ def test_calculadora_divide_14_por_6():
 def test_calculadora_string_qualquer():
     assert op.calculadora('joao', [6.88, 14.26, 10.93, 3.75, 7.42, 12.19, 19.85, 5.11, 18.04, 11.55]) == \
         [6.88, 14.26, 10.93, 3.75, 7.42, 12.19, 19.85, 5.11, 18.04, 11.55]
+
+
+def test_inicializa_stack():
+    assert op.inicializa_stack() == [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+
+def test_clear_stack():
+    assert op.calculadora('clc', [6.88, 14.26, 10.93, 3.75, 7.42, 12.19, 19.85, 5.11, 18.04, 11.55]) == \
+        [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]

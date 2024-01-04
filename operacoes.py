@@ -98,7 +98,16 @@ def e_numero(entrada: str):
 
     return boleano
 
-def calculadora(entrada,stack):
+
+def inicializa_stack():
+    var_in = float(0)
+    stack = [var_in]
+    for i in range(9):
+        stack.append(var_in)
+    return stack
+
+
+def calculadora(entrada, stack):
     if e_numero(entrada):
         stack = adiciona_ao_stack(float(entrada), stack)
     elif entrada == '+':
@@ -109,8 +118,8 @@ def calculadora(entrada,stack):
         stack = divide_stack(stack)
     elif entrada == '*':
         stack = multiplica_stack(stack)
-    # elif entrada == 'clc':
-        # stack = inicializa_stack()
+    elif entrada == 'clc':
+        stack = inicializa_stack()
     return stack
 
 
