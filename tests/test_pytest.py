@@ -1,4 +1,4 @@
-import operacoes as op
+import src as op
 
 
 def test_adiciona_10_ao_stack():

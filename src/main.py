@@ -2,8 +2,8 @@
 Esse módulo é o responsável por rodar o programa Calculadora RPN
 """
 # noinspection PyPep8Naming
-import interface_homem_maquina as ihm
-import operacoes as op
+import src.interface_homem_maquina as ihm
+import src.operacoes as op
 
 
 def main() -> None:
@@ -37,12 +37,12 @@ def main() -> None:
     Execução principal concluída.
     """
     stack = op.inicializa_stack()
-    saida = False
-    while saida != True:
+    saida = True
+    while saida:
         entrada = ihm.principal(stack)
         stack = op.calculadora(entrada, stack)
         if entrada == 'q':
-            saida = True
+            saida = False
 
 
 if __name__ == '__main__':

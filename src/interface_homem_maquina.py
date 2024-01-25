@@ -20,7 +20,7 @@ from os import system, name
 def principal(stack) -> str:
     """
     Essa função é a tela principal da calculadora, onde imprime o stack e pega
-    a entrada do usuario
+    a entrada do usuário
     :param stack: list
     :return: str
     """
@@ -37,7 +37,7 @@ def principal(stack) -> str:
 
 def clear() -> None:
     """
-     Essa função limpa a tela do usuário, independente so sitema operacional
+     Essa função limpa a tela do usuário, independente so sistema operacional
      """
     if name == 'nt':
         _ = system('cls')
