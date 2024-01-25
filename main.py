@@ -33,16 +33,16 @@ def main() -> None:
 
     Exemplo:
     --------
-    >>> main()
+    >>> main() # doctest: +SKIP
     Execução principal concluída.
     """
     stack = op.inicializa_stack()
-    saida = 1
-    while saida != 0:
+    saida = False
+    while saida != True:
         entrada = ihm.principal(stack)
         stack = op.calculadora(entrada, stack)
         if entrada == 'q':
-            saida = 0
+            saida = True
 
 
 if __name__ == '__main__':
